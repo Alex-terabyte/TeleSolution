@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleWindowsFormsApp3", "WindowsFormsApp3\TeleWindowsFormsApp3.csproj", "{E33A8C50-0F0F-40CA-B1B8-383F06BBA15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleLibrary1", "ClassLibrary1\TeleLibrary1.csproj", "{CC924970-1B42-4C9D-8889-A2D354646D97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E33A8C50-0F0F-40CA-B1B8-383F06BBA15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33A8C50-0F0F-40CA-B1B8-383F06BBA15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33A8C50-0F0F-40CA-B1B8-383F06BBA15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33A8C50-0F0F-40CA-B1B8-383F06BBA15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC924970-1B42-4C9D-8889-A2D354646D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC924970-1B42-4C9D-8889-A2D354646D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC924970-1B42-4C9D-8889-A2D354646D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC924970-1B42-4C9D-8889-A2D354646D97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB0B741E-17EF-45B6-963E-1954ED7D4A66}
+	EndGlobalSection
+EndGlobal
