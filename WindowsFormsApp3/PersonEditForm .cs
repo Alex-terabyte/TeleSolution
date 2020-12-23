@@ -24,11 +24,6 @@ namespace WindowsFormsApp3
         {
             Close();
         }
-        /// <summary>
-        /// button 1 click function
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
           
@@ -47,6 +42,12 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LimitList _limitList = LimitList.GetLimitList();
+            limitIDComboBox.DataSource = _limitList;
+
+            TipList _tipList = TipList.GetTipList();
+            tipIDComboBox.DataSource = _tipList;
+
             teleInfoBindingSource.DataSource = _newTele;
         }
 

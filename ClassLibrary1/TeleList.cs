@@ -34,7 +34,10 @@ namespace TeleLibrary1
                 newTele.TeleDataBirth = (DateTime) dr["TeleDataBirth"];
                 newTele.TelePresenterName = dr["TelePresenterName"].ToString();
                 newTele.TelePresenterSecondName = dr["TelePresenterSecondName"].ToString();
-
+                newTele.TipID = (int)dr["TipID"];
+                newTele.TipName = dr["TipName"].ToString();
+                newTele.LimitID = (int)dr["LimitID"];
+                newTele.LimitName = dr["LimitName"].ToString();
                 myList.Add(newTele);
             }
             return myList;

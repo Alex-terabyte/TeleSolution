@@ -13,7 +13,58 @@ namespace TeleLibrary1
         private DateTime _teleDataBirth = DateTime.Today;
         private string _telePresenterName = "";
         private string _telePresenterSecondName = "";
+        private int _tipID = 0;
+        private string _tipName = "";
+        private int _limitID = 0;
+        private string _limitName = "";
 
+
+
+        public int TipID
+        {
+            get
+            {
+                return _tipID;
+            }
+            set
+            {
+                _tipID = value;
+            }
+        }
+        public string TipName
+        {
+            get
+            {
+                return _tipName;
+            }
+            set
+            {
+                _tipName = value;
+            }
+        }
+
+        public int LimitID
+        {
+            get
+            {
+                return _limitID;
+            }
+            set
+            {
+                _limitID = value;
+            }
+        }
+        public string LimitName
+        {
+            get
+            {
+                return _limitName;
+            }
+            set
+            {
+                _limitName = value;
+            }
+        }
 
 
         public int TeleID
@@ -85,8 +136,7 @@ namespace TeleLibrary1
 
         public void InsertTele()
         {
-            try
-            {
+            
                 SqlConnection cn = new SqlConnection();
 
                 cn.ConnectionString = "Data Source=DESKTOP-GQ7HRNP\\SQLEXPRESS; Initial Catalog=TeleDB; Integrated Security=True";
@@ -100,14 +150,12 @@ namespace TeleLibrary1
                 cm.Parameters.Add(new SqlParameter("@TeleName", _teleName));
                 cm.Parameters.Add(new SqlParameter("@TelePresenterName", _telePresenterName));
                 cm.Parameters.Add(new SqlParameter("@TelePresenterSecondName", _telePresenterSecondName));
+                cm.Parameters.Add(new SqlParameter("@TipID", _tipID));
+                cm.Parameters.Add(new SqlParameter("@LimitID", _tipID));
 
-                cm.ExecuteNonQuery();
-            }
-            catch (Exception msg)
-            {
-                Console.WriteLine(msg);
-                throw;
-            }
+            cm.ExecuteNonQuery();
+            
+            
         }
 
         public void DeleteTele()
@@ -142,6 +190,8 @@ namespace TeleLibrary1
             cm.Parameters.Add(new SqlParameter("@TeleDataBirth", _teleDataBirth));           
             cm.Parameters.Add(new SqlParameter("@TelePresenterName", _telePresenterName));
             cm.Parameters.Add(new SqlParameter("@TelePresenterSecondName", _telePresenterSecondName));
+            cm.Parameters.Add(new SqlParameter("@TipID", _tipID));
+            cm.Parameters.Add(new SqlParameter("@LimitID", _tipID));
 
             cm.ExecuteNonQuery();
         }
@@ -168,6 +218,11 @@ namespace TeleLibrary1
                 _telePresenterName = dr["TelePresenterName"].ToString();
                 _telePresenterSecondName = dr["TelePresenterSecondName"].ToString();
                 _teleID = (int)dr["TeleID"];
+                _tipID = (int)dr["TipID"];
+                _tipName = dr["TipName"].ToString();
+                _limitID = (int)dr["LimitID"];
+                _limitName = dr["LimitName"].ToString();
+
             }
         }
     }
